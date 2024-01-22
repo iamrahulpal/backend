@@ -11,11 +11,11 @@ const dotenv = require("dotenv");
 const cors = require("cors");
 dotenv.config();
 
-const corsOptions = {
-  origin: "",
-  credentials: true,
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: "",
+//   credentials: true,
+// };
+app.use(cors());
 app.use(cors());
 app.use(bodyParser.json());
 
