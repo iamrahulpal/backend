@@ -12,11 +12,11 @@ const cors = require("cors");
 dotenv.config();
 
 // const corsOptions = {
-//   origin: "",
+//   origin: "http://localhost:5173",
 //   credentials: true,
 // };
 app.use(cors());
-app.use(cors());
+
 app.use(bodyParser.json());
 
 // Use the userRoutes for all user-related routes
