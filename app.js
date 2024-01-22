@@ -18,9 +18,14 @@ dotenv.config();
 app.use(cors());
 
 app.use(bodyParser.json());
-
+mongo.connect()
 // Use the userRoutes for all user-related routes
 app.use("/api/post", postRoutes);
+app.get("/", (req, res) => {
+  res.status(200).json({
+    data: "Server is healthy."
+  })
+})
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
