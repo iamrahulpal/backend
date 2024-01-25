@@ -5,7 +5,7 @@ class Logout {
         httpOnly: true,
         maxAge: 24 * 60 * 60 * 1000, //1 day
         secure: true,
-        sameSite: "Lax"
+        sameSite: "none"
       };
       res.cookie("jwt", "", options);
       res.status(200).json({

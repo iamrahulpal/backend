@@ -28,9 +28,9 @@ class loginUser {
       );
       const options = {
         httpOnly: true,
-        maxAge: 24 * 60 * 60 * 1000, //1 day
-        secure: true,
-        sameSite: "Lax"
+            maxAge: 24 * 60 * 60 * 1000, //1 day
+            secure: true,
+            sameSite:'none'
       };
       res.cookie("jwt", token, options);
       res.status(201).json({
