@@ -5,7 +5,7 @@ class getPost {
   async post() {
     try {
       const posts = await Post.find().sort({"createdAt": -1});
-      console.log("🚀 ~ posts:", posts)
+      // console.log("🚀 ~ posts:", posts)
       if (!posts) throw "Post doesn't exists";
       return posts;
     } catch (error) {
